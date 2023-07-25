@@ -110,3 +110,12 @@ const passwordGenerator = length => {
 }
 
 // console.log(passwordGenerator(8))
+
+/** 
+Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
+*/
+const findSecondSmallest = array =>{
+    const sortedArray = array.sort((a,b) => a-b)
+    return sortedArray[1]
+}
+// console.log(findSecondSmallest([5,4,6,78,2,3,1]))
