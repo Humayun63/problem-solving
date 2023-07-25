@@ -71,13 +71,42 @@ const findIndices = (array, target) => {
 /** 
 Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
 */
-const calculator = (a,b, operator) =>{
-    if(operator === '+') return a + b;
-    if(operator === '-') return a - b;
-    if(operator === '*') return a * b;
-    if(operator === '/') return a / b;
+const calculator = (a, b, operator) => {
+    if (operator === '+') return a + b;
+    if (operator === '-') return a - b;
+    if (operator === '*') return a * b;
+    if (operator === '/') return a / b;
 }
 // console.log(calculator(4,2,'+'));
 // console.log(calculator(4,2,'-'));
 // console.log(calculator(4,2,'*'));
 // console.log(calculator(4,2,'/'));
+
+
+/**
+Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
+*/
+
+//It will return minimum 4 length password and maximum with the provided length
+const passwordGenerator = length => {
+    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    const numbers = '0123456789';
+    const specialChar = '~!@#$%^&*-_';
+    const allChar = uppercase + lowercase + numbers + specialChar;
+    let password = '';
+
+    password += uppercase.charAt(Math.floor(Math.random() * uppercase.length))
+    password += lowercase.charAt(Math.floor(Math.random() * lowercase.length))
+    password += numbers.charAt(Math.floor(Math.random() * numbers.length))
+    password += specialChar.charAt(Math.floor(Math.random() * specialChar.length))
+
+    while (password.length < length) {
+        console.log(password);
+        password += allChar.charAt(Math.floor(Math.random() * allChar.length))
+    }
+
+    return password;
+}
+
+// console.log(passwordGenerator(8))
