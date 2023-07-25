@@ -67,3 +67,17 @@ const findIndices = (array, target) => {
 }
 
 // console.log(findIndices([1, 3, 6, 8, 11, 15], 9))
+
+/** 
+Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+*/
+const calculator = (a,b, operator) =>{
+    if(operator === '+') return a + b;
+    if(operator === '-') return a - b;
+    if(operator === '*') return a * b;
+    if(operator === '/') return a / b;
+}
+// console.log(calculator(4,2,'+'));
+// console.log(calculator(4,2,'-'));
+// console.log(calculator(4,2,'*'));
+// console.log(calculator(4,2,'/'));
